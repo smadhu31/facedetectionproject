@@ -933,8 +933,8 @@
     // ══════════════════════════════════════════════════════
     // CONFIGURATION: Determine backend URL
     const BACKEND_URL = new URLSearchParams(window.location.search).get('backend') || '';
-    const DEFAULT_BACKEND = 'http://localhost:5000';
-    const API = BACKEND_URL ? BACKEND_URL.replace(/\/+$/,'') : DEFAULT_BACKEND;
+    const DEFAULT_BACKEND = "https://your-koyeb-app.koyeb.app";
+    const API = BACKEND_URL ? BACKEND_URL.replace(/\/+$/, '') : DEFAULT_BACKEND;
 
     // All mutable cross-function state declared up top, once,
     // before any function that references it is ever called.
