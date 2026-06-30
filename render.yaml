@@ -1,7 +1,7 @@
 services:
   - type: web
     name: faceattend
-    env: python
+    env: docker
     plan: starter
     buildCommand: "bash build.sh"
     startCommand: "gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120"
