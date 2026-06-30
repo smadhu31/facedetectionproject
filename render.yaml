@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: faceattend
+    env: python
+    plan: starter
+    buildCommand: "bash build.sh"
+    startCommand: "gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DATA_DIR
+        value: /var/data
+      - key: DATABASE_PATH
+        value: /var/data/faceattend.db
+      - key: MATCH_TOLERANCE
+        value: "0.5"
+    disk:
+      name: faceattend-data
+      mountPath: /var/data
+      sizeGB: 1
