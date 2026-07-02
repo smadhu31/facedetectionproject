@@ -933,7 +933,7 @@
     // ══════════════════════════════════════════════════════
     // CONFIGURATION: Determine backend URL
     const BACKEND_URL = new URLSearchParams(window.location.search).get('backend') || '';
-    const DEFAULT_BACKEND = 'https://facedetection.onrender.com';
+    const DEFAULT_BACKEND = 'http://127.0.0.1:5000';
     const API = BACKEND_URL ? BACKEND_URL.replace(/\/+$/, '') : DEFAULT_BACKEND;
 
     // All mutable cross-function state declared up top, once,
