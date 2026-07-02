@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: faceattend
+    name: facedetectionproject
     env: docker
-    plan: starter
+    dockerfilePath: ./Dockerfile
     disk:
       name: faceattend-data
       mountPath: /var/data
